@@ -1,0 +1,10 @@
+{
+  "database": {
+    "development": {
+      "mongoUrl": "mongodb://127.0.0.1:27017/cativity-dev"
+    },
+    "production": {
+      "mongoUrl": "mongodb://127.0.0.1:27017/cativity-prod"
+    }
+  }
+}
