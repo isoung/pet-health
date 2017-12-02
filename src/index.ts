@@ -2,6 +2,7 @@ import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as expressGraphql from 'express-graphql';
 import * as morgan from 'morgan';
+import * as path from 'path';
 
 import { GraphQLSchema } from 'api/graphql/merger';
 import { Scope } from 'api/scope';
@@ -33,7 +34,7 @@ app.use('/graphql',
 (req, res, next) => {
   // Development only... authentication should be handled here
   // req.params.user = require('./_config/user.json')['userId'];
-  console.log(req.body.query);
+  // console.log(req.body.query);
   next();
 },
 async (req: any, res, next) => {
@@ -58,6 +59,19 @@ expressGraphql(() => ({
 app.use((err: any, req: any, res: any, next: any) => {
   res.status(err.statusCode || 500).send({ error: err.message });
 });
+
+if (process.env.NODE_ENV === 'development') {
+  app.get('*', (req: express.Request, res: express.Response, next: any) => {
+    res.status(200).sendFile(path.join(__dirname, '_client/index.development.html'));
+  });
+}
+else {
+  app.get('*', (req: express.Request, res: express.Response, next: any) => {
+    res.status(200).sendFile(path.join(__dirname, '../app/index.production.html'));
+  });
+}
+
+app.use(express.static(path.join(__dirname, '../app')));
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`\u001b[37m====================================================\u001b[39m`);
