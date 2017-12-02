@@ -1,10 +1,10 @@
 {
   "database": {
     "development": {
-      "mongoUrl": "mongodb://127.0.0.1:27017/cativity-dev"
+      "mongoUrl": "mongodb://127.0.0.1:27017/pet-health-dev"
     },
     "production": {
-      "mongoUrl": "mongodb://127.0.0.1:27017/cativity-prod"
+      "mongoUrl": "mongodb://127.0.0.1:27017/pet-health-prod"
     }
   }
 }

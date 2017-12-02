@@ -75,7 +75,7 @@ app.use(express.static(path.join(__dirname, '../app')));
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`\u001b[37m====================================================\u001b[39m`);
-  console.log(`\u001b[37mcativity server STARTED\u001b[39m`);
+  console.log(`\u001b[37mpet-health server STARTED\u001b[39m`);
   console.log(`\u001b[37m====================================================\u001b[39m`);
   console.log(`\u001b[37mServer PORT:   ${process.env.PORT || 3000}\u001b[39m`);
   console.log(`\u001b[37mDatabase ENV:  ${process.env.NODE_ENV}\u001b[39m`);
