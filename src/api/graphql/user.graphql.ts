@@ -38,7 +38,8 @@ export const schema = `
 
 export const mutations = `
   createUser(userCreate: UserCreate!): User,
-  updateUser(id: String!, userUpdate: UserUpdate!): User
+  updateUser(id: String!, userUpdate: UserUpdate!): User,
+  authenticateUser(email: String!, password: String!): String
 `;
 
 export const rootQuery = `
@@ -61,6 +62,12 @@ export const resolvers = {
       );
 
       return user;
+    },
+    async authenticateUser(parent: {}, args: IUserInput, context: IRequestScope) {
+      const userController = new UserController();
+      const apiKey = await userController.authenticateUser(args.email, args.password);
+
+      return apiKey;
     }
     // async updateUser(parent: {}, args: IUserQuery, context: IContext) {
     //   if (args.userUpdate.admin) {

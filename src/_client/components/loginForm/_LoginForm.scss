@@ -1,0 +1,36 @@
+@import './../../_common/_ColorSchema.scss';
+
+.container {
+  // background-color: lightsteelblue;
+  height: 200px;
+  position: fixed;
+  right: 10%;
+  top: 35%;
+  width: 400px;
+
+  span {
+    color: $primary-white;
+    font-size: 32px;
+  }
+
+  input::-webkit-input-placeholder {
+    color: $primary-white;
+  }
+
+  input {
+    background-color: transparent;
+    border-color: $primary-dark;
+    color: $primary-white;
+  }
+}
+
+.login-button {
+  composes: button is-link from 'bulma';
+  left: 83%;
+  position: relative;
+  top: 15%;
+}
+
+.email-input {
+  margin-bottom: 5px;
+}

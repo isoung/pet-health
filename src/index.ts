@@ -60,8 +60,12 @@ app.use((err: any, req: any, res: any, next: any) => {
   res.status(err.statusCode || 500).send({ error: err.message });
 });
 
+app.use('/resources', express.static(path.join(__dirname, '../app/resources')));
+app.use('/css', express.static('css'));
+
 if (process.env.NODE_ENV === 'development') {
   app.get('*', (req: express.Request, res: express.Response, next: any) => {
+    // console.log(path.join(__dirname, '_client/index.development.html'));
     res.status(200).sendFile(path.join(__dirname, '_client/index.development.html'));
   });
 }
@@ -70,8 +74,6 @@ else {
     res.status(200).sendFile(path.join(__dirname, '../app/index.production.html'));
   });
 }
-
-app.use(express.static(path.join(__dirname, '../app')));
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`\u001b[37m====================================================\u001b[39m`);

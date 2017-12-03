@@ -6,3 +6,9 @@ export async function generatePassword(password: string) {
 
   return saltedPassword;
 }
+
+export async function validatePassword(password: string, hash: string) {
+  const resultPassword = await bcrypt.compare(password, hash);
+
+  return resultPassword;
+}

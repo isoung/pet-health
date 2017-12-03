@@ -36,7 +36,17 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.html/, loader: 'raw-loader' },
-      { test: /\.jpg$|\.png$/, loader: 'file-loader' },
+      {
+        test: /\.jpg$|\.png$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'resources/'
+            }
+          }
+        ]
+      },
       { test: /\.ts$/, loader: 'awesome-typescript-loader?configFileName=./tsconfig.json!tslint-loader?configFile=tslint.json' },
       { test: /\.tsx$/, loader: 'awesome-typescript-loader?configFileName=./tsconfig.json!tslint-loader?configFile=tslint.json' },
       { test: /\.json$/, loader: 'json-loader' },
@@ -56,6 +66,12 @@ module.exports = {
           },
           {
             loader: 'sass-loader'
+          },
+          {
+            loader: 'bulma-loader',
+            options: {
+              theme: 'src/_client/_bulma.sass'
+            }
           }
         ]
       },

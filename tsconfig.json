@@ -21,7 +21,7 @@
     "target": "ES5"
   },
   "exclude": [
-    // "node_modules/**/*.ts"
+    "./node_modules/mongoose-class-wrapper/index.d.ts"
   ],
   "include": [
     "./**/*.ts",
