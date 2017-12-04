@@ -11,7 +11,7 @@ export class Scope {
   private user: IUserModel;
 
   public async initializeScope(req: express.Request) {
-    const apiKeyRequest = '5Ls8P3cVJ8frTjBioQG6AyKDDcvCIswh';
+    const apiKeyRequest = 's4A9GmHMbEwa1QuBQKcdOfekBKEGnSRp';
 
     const apiKey = await APIKeyModel.findOne({
       key: apiKeyRequest

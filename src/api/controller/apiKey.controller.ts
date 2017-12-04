@@ -11,4 +11,12 @@ export class APIKeyController {
     const savedAPIKey = await newAPIKey.save();
     return savedAPIKey;
   }
+
+  public async authenticateAPIKey(apiKey: string) {
+    const foundAPIKey = await APIKeyModel.findOne({
+      key: apiKey
+    });
+
+    return foundAPIKey ? true : false;
+  }
 }

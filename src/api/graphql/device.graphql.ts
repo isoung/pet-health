@@ -14,7 +14,8 @@ export const schema = `
   type Device {
     id: String,
     serialNumber: String,
-    user: User
+    user: User,
+    name: String
   },
   input DeviceCreate {
     serialNumber: String!
@@ -26,12 +27,17 @@ export const mutations = `
 `;
 
 export const rootQuery = `
-  device: Device
+  devices: [Device]
 `;
 
 export const resolvers = {
   RootQuery: {
+    async devices(parent: {}, args: IDeviceQuery, context: IRequestScope) {
+      const deviceController = new DeviceController();
+      const devices = deviceController.readUserDevices(context.scope);
 
+      return devices;
+    }
   },
   Mutations: {
     async createDevice(parent: {}, args: IDeviceQuery, context: IRequestScope) {

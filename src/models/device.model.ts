@@ -12,12 +12,14 @@ class Device extends BaseModel {
       ref: 'User',
       required: true
     },
-    active: { type: Number, required: true }
+    active: { type: Number, required: true },
+    name: { type: String, required: true }
   };
 
   public serialNumber: string;
   public user: IUserModel;
   public active: number;
+  public name: string;
 }
 
 export interface IDeviceModel extends mongoose.Document, Device {}

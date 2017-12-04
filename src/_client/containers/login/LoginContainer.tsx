@@ -42,7 +42,6 @@ class LoginContainerComponent extends React.Component<any, any> {
       location.reload();
     }
     catch (err) {
-      console.log(err);
       Materialize.toast('You username and/or password is incorrect', 2000, 'red');
     }
   }

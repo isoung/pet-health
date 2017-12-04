@@ -1,8 +1,15 @@
+@import './_common/_Spinner.scss';
+
 body {
+  font-family: 'Overpass', sans-serif !important;
+}
+
+.login {
   background-attachment: fixed;
   background-image: url('./resources/background.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Overpass', sans-serif !important;
+  height: 100%;
+  width: 100%;
 }

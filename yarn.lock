@@ -27,6 +27,14 @@
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.3.tgz#3f0ff6873da793870e20a260cada55982f38a9e5"
 
+"@types/d3@^3.5":
+  version "3.5.40"
+  resolved "https://registry.yarnpkg.com/@types/d3/-/d3-3.5.40.tgz#277b575d79445a6dccc017d9bea71b72344c6e5f"
+
+"@types/events@*":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@types/events/-/events-1.1.0.tgz#93b1be91f63c184450385272c47b6496fd028e02"
+
 "@types/express-graphql@0.0.33":
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/@types/express-graphql/-/express-graphql-0.0.33.tgz#4045a19169fb676c5aa0c0db7380048ec5839a5b"
@@ -85,8 +93,8 @@
   resolved "https://registry.yarnpkg.com/@types/isomorphic-fetch/-/isomorphic-fetch-0.0.34.tgz#3c3483e606c041378438e951464f00e4e60706d6"
 
 "@types/lodash@^4.14.86":
-  version "4.14.86"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.86.tgz#6788d3d75032c46322ff1c144c948cf8117c405b"
+  version "4.14.87"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.87.tgz#55f92183b048c2c64402afe472f8333f4e319a6b"
 
 "@types/mime@*":
   version "2.0.0"
@@ -117,8 +125,10 @@
     "@types/express" "*"
 
 "@types/node@*":
-  version "8.0.53"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.53.tgz#396b35af826fa66aad472c8cb7b8d5e277f4e6d8"
+  version "8.0.54"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.54.tgz#3fd9357db4af388b79e03845340259440edffde6"
+  dependencies:
+    "@types/events" "*"
 
 "@types/randomstring@^1.1.6":
   version "1.1.6"
@@ -143,8 +153,8 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^16.0.5":
-  version "16.0.25"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.25.tgz#bf696b83fe480c5e0eff4335ee39ebc95884a1ed"
+  version "16.0.26"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.26.tgz#ccc243302d2a4b4a02923ddc1263599d957d3174"
 
 "@types/serve-static@*":
   version "1.13.1"
@@ -1318,6 +1328,10 @@ currently-unhandled@^0.4.1:
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
   dependencies:
     array-find-index "^1.0.1"
+
+d3@^3.5, d3@^3.5.16:
+  version "3.5.17"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-3.5.17.tgz#bc46748004378b21a360c9fc7cf5231790762fb8"
 
 d@1:
   version "1.0.0"
@@ -3532,8 +3546,8 @@ mongoose-class-wrapper@0.9.0:
   resolved "https://registry.yarnpkg.com/mongoose-class-wrapper/-/mongoose-class-wrapper-0.9.0.tgz#bb74fc2d754aac7476e826e4c89048a7e400758b"
 
 mongoose@^4.13.2:
-  version "4.13.5"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.13.5.tgz#5ae9df5ef8151efbadc33a71068dd879ae720cd2"
+  version "4.13.6"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.13.6.tgz#48102f0b0d797a9bd273e581eef16d0505ef3d79"
   dependencies:
     async "2.1.4"
     bson "~1.0.4"
@@ -4120,6 +4134,13 @@ pinkie-promise@^2.0.0:
 pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
+
+plottable@^2.*:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/plottable/-/plottable-2.9.1.tgz#f6c833b8f380cce1bfe415550e1a5da3ca2c76c6"
+  dependencies:
+    d3 "^3.5.16"
+    svg-typewriter "1.0.2"
 
 pluralize@^1.2.1:
   version "1.2.1"
@@ -5466,6 +5487,13 @@ supports-color@^4.0.0, supports-color@^4.4.0:
   dependencies:
     has-flag "^2.0.0"
 
+svg-typewriter@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/svg-typewriter/-/svg-typewriter-1.0.2.tgz#cd1a72a0167b911eb4eb1f5de6f19e67c36302b8"
+  dependencies:
+    "@types/d3" "^3.5"
+    d3 "^3.5"
+
 svgo@^0.7.0:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-0.7.2.tgz#9f5772413952135c6fefbf40afe6a4faa88b4bb5"
@@ -5705,8 +5733,8 @@ ua-parser-js@^0.7.9:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
 uglify-js@3.2.x:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.2.0.tgz#cb411ee4ca0e0cadbfe3a4e1a1da97e6fa0d19c1"
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.2.1.tgz#d6427fd45a25fefc5d196689c0c772a6915e10fe"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
