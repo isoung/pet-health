@@ -1,0 +1,17 @@
+.modal {
+  height: 80%;
+  padding: 30px;
+  position: fixed;
+  width: 80%;
+}
+
+.exit-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transition: .6s cubic-bezier(.165, .84, .44, 1);
+
+  &:hover {
+    font-size: 38;
+  }
+}

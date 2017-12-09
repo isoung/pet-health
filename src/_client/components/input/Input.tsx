@@ -6,6 +6,7 @@ interface IInputProps {
   styleName?: string;
   className?: any;
   password?: boolean;
+  value?: string;
   onInputChange: (event: any) => void;
 }
 
@@ -14,6 +15,7 @@ const styles = require('./_Input.scss');
 export class Input extends React.Component<IInputProps, any> {
   public render() {
     return <input
+      value={this.props.value}
       type={this.props.password ? 'password' : 'text'}
       className={this.props.className}
       styleName='input'

@@ -61,6 +61,7 @@ app.use((err: any, req: any, res: any, next: any) => {
 });
 
 app.use('/resources', express.static(path.join(__dirname, '../app/resources')));
+app.use('/webfonts', express.static('webfonts'));
 app.use('/css', express.static('css'));
 
 if (process.env.NODE_ENV === 'development') {

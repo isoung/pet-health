@@ -3,6 +3,7 @@ import { IRequestScope } from 'api/scope';
 
 export interface IDeviceInput {
   serialNumber: string;
+  name: string;
 }
 
 export interface IDeviceQuery {
@@ -18,7 +19,8 @@ export const schema = `
     name: String
   },
   input DeviceCreate {
-    serialNumber: String!
+    serialNumber: String!,
+    name: String!
   }
 `;
 

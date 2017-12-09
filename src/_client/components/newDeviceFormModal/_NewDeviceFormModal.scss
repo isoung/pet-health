@@ -1,0 +1,19 @@
+.container {
+  height: 400px;
+  padding: 40px;
+  width: 400px;
+}
+
+.create-btn {
+  composes: button from 'bulma';
+  left: 170px;
+  position: relative;
+  top: 150px;
+}
+
+.cancel-btn {
+  composes: button from 'bulma';
+  left: 150px;
+  position: relative;
+  top: 150px;
+}

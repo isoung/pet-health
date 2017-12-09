@@ -1,0 +1,51 @@
+@import './../../_common/_ColorSchema.scss';
+
+.name-label {
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+.container {
+  -webkit-transition: .6s cubic-bezier(.165, .84, .44, 1);
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px $primary;
+  display: inline-block;
+  height: 200px;
+  margin: 25px;
+  position: relative;
+  transition: .6s cubic-bezier(.165, .84, .44, 1);
+  width: 200px;
+}
+
+.container::after {
+  -webkit-transition: .6s cubic-bezier(.165, .84, .44, 1);
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: .6s cubic-bezier(.165, .84, .44, 1);
+  width: 100%;
+  z-index: -1;
+}
+
+.container:hover {
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+}
+
+.container:hover::after {
+  opacity: 1;
+}
+
+.chart-icon {
+  font-size: 60px;
+  left: 70px;
+  position: relative;
+  top: 50px;
+}

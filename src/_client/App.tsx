@@ -44,7 +44,7 @@ export class App extends React.Component<any, any> {
   public render() {
     if (this.state.authenticated) {
       return (
-        <div>
+        <div styleName='login'>
           <DashboardContainer/>
         </div>
       );
@@ -52,7 +52,7 @@ export class App extends React.Component<any, any> {
 
     if (this.state.loading) {
       return (
-        <div></div>
+        <div styleName='login'/>
       );
     }
 

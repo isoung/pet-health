@@ -5,7 +5,6 @@ import { DeviceModel } from 'models/device.model';
 export class DeviceController {
   public async createInstance(scope: Scope, args: IDeviceInput) {
     const user = scope.getUser();
-    console.log(user);
 
     const foundDevice = await DeviceModel.findOne({
       serialNumber: args.serialNumber
@@ -17,6 +16,7 @@ export class DeviceController {
 
     const device = new DeviceModel({
       serialNumber: args.serialNumber,
+      name: args.name,
       user: user,
       active: true
     });
