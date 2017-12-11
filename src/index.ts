@@ -7,6 +7,7 @@ import * as path from 'path';
 import { GraphQLSchema } from 'api/graphql/merger';
 import { Scope } from 'api/scope';
 import { connectDb } from 'config/connectDb';
+import { setNotifications } from 'libs/notification/notification';
 
 const config = require('./config/db.json');
 const databaseConfig = config['database'][process.env.NODE_ENV];
@@ -75,6 +76,8 @@ else {
     res.status(200).sendFile(path.join(__dirname, '../app/index.production.html'));
   });
 }
+
+setNotifications();
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`\u001b[37m====================================================\u001b[39m`);

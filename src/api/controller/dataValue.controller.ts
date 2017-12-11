@@ -15,11 +15,12 @@ export class DataValueController {
     }
 
     const date = new Date(args.publishedDate);
+    const time = date.getTime();
 
     const dataValue = new DataValueModel({
       value: args.value,
       device: device,
-      publishedDate: Math.round(date.getTime() / 1000)
+      publishedDate: isNaN(time) ? args.publishedDate : Math.round(time / 1000)
     });
 
     const savedDataValue = await dataValue.save();

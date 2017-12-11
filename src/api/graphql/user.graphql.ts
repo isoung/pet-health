@@ -7,6 +7,7 @@ export interface IUserInput {
   firstName: string;
   lastName: string;
   password: string;
+  phoneNumber: string;
 }
 
 export interface IUserQuery {
@@ -27,12 +28,14 @@ export const schema = `
     firstName: String!,
     lastName: String!,
     password: String!,
+    phoneNumber: String!
   },
   input UserUpdate {
     firstName: String,
     lastName: String,
     admin: Boolean,
-    active: Boolean
+    active: Boolean,
+    phoneNumber: String!
   }
 `;
 

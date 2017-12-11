@@ -8,13 +8,15 @@ class User extends BaseModel {
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     email: { type: String, required: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    phoneNumber: { type: String, required: true }
   };
 
   public firstName: string;
   public lastName: string;
   public email: string;
   public password: string;
+  public phoneNumber: string;
 }
 
 export interface IUserModel extends mongoose.Document, User {}

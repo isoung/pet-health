@@ -22,4 +22,4 @@ class DataValue extends BaseModel {
 
 export interface IDataValueModel extends mongoose.Document, DataValue {}
 
-export const DataValueModel = createModel<IDeviceModel>(new mongoose.Schema(DataValue.schema), DataValue, 'dataValue');
+export const DataValueModel = createModel<IDataValueModel>(new mongoose.Schema(DataValue.schema), DataValue, 'dataValue');

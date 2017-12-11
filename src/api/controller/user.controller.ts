@@ -21,7 +21,8 @@ export class UserController {
       email: args.email,
       firstName: args.firstName,
       lastName: args.lastName,
-      password: saltedPassword
+      password: saltedPassword,
+      phoneNumber: args.phoneNumber
     });
 
     const savedUser = await user.save();
