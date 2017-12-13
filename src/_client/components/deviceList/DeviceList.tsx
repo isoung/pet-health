@@ -47,7 +47,7 @@ export class DeviceList extends React.Component<IDeviceListComponent, any> {
         <a className='btn-floating btn-large waves-effect waves-light red' styleName='add-button' onClick={this.handleAddDeviceClick}>
           <i className='material-icons'>add</i>
         </a>
-        <ChartModalContainer serialNumber={this.state.serialNumber} range={50}/>
+        <ChartModalContainer serialNumber={this.state.serialNumber} range={10}/>
         <NewDeviceFormContainer/>
       </div>
     );
